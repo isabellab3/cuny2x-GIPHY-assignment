@@ -5,7 +5,7 @@ import Dashboard from './components/Dashboard.js'
 
 function App() {
   return (
-    <SearchField/>
+    <Dashboard/>
   );
 }
 
