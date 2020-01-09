@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import axios from "axios"
 
-
-
 const API_KEY = "tmtF2QRwHh7tnPxTZp5sxWf4FSX5DcBQ"
-class SearchField extends Component{
+
+class Dashboard extends Component{
   constructor(props){
     super(props)
     this.state = {
@@ -33,4 +32,4 @@ class SearchField extends Component{
   }
 }
 
-export default SearchField
+export default Dashboard
