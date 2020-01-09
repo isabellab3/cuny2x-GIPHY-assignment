@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class SearchField extends Component{
+class Dashboard extends Component{
   constructor(props){
     super(props)
     this.state = {
@@ -24,4 +24,4 @@ class SearchField extends Component{
   }
 }
 
-export default SearchField
+export default Dashboard
