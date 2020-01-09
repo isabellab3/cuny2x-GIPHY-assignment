@@ -15,7 +15,6 @@ function GifLoader(props){
            </div>
 }
 
-
 GifLoader.propTypes = {
   gifs:PropTypes.array.isRequired
 }
