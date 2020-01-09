@@ -16,11 +16,11 @@ class Dashboard extends Component{
     this.setState({searchInput:e.target.value})
   }
   handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const { searchInput } = this.state;
     const endpoint = `http://api.giphy.com/v1/gifs/search?q=${searchInput}&api_key=${API_KEY}`
     const gifs = await axios.get(endpoint)
-    this.setState({gifs})
+    this.setState({gifs:gifs.data.data})
   }
   render(){
     return <div className="searchField">
@@ -29,6 +29,7 @@ class Dashboard extends Component{
                 <input type="text" value={this.state.searchInput} onChange={this.handleInput}></input>
                 <button type="submit">Submit</button>
               </form>
+              <GifLoader gifs = {this.state.gifs}/>
            </div>
   }
 }
