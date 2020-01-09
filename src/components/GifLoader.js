@@ -14,9 +14,11 @@ class GifLoader extends Component{
     const endpoint = 'MzlYWCHJ0QwFL0JRq1G9YLQ5UV0QlVfF'
 
   }
-  getTrending = () => {
-    console.log("getTrending")
-    
+  getTrending = async () => {
+    const { key } = this.state;
+    const endpoint = `http://api.giphy.com/v1/gifs/trending?api_key=${key}`
+    const response = await axios.get(endpoint)
+    this.setState({gifs: response.data.data})
   }
   async componentDidMount(){
     this.getTrending()
