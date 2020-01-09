@@ -1,31 +1,22 @@
-import React, {Component} from 'react';
-import axios from "axios";
+import React from 'react';
+import PropTypes from 'prop-types'
 
-class GifLoader extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      query:props.query,
-      key:"tmtF2QRwHh7tnPxTZp5sxWf4FSX5DcBQ",
-      gifs:[]
-    }
-  }
-  searchGiphy = () => {
-    const endpoint = 'MzlYWCHJ0QwFL0JRq1G9YLQ5UV0QlVfF'
+function GifLoader(props){
+    return <div className="gifloader">
+              {props.gifs.length > 0 ?
+                  props.gifs.map((gif, index) => {
+                    return (<div className="gif" key={index}>
+                              <img src={gif.images.original.url} alt="gif" width={200}></img>
+                           </div>)
+                  })
+                :
+                <p>Loading</p>
+              }
+           </div>
+}
 
-  }
-  getTrending = async () => {
-    const { key } = this.state;
-    const endpoint = `http://api.giphy.com/v1/gifs/trending?api_key=${key}`
-    const response = await axios.get(endpoint)
-    this.setState({gifs: response.data.data})
-  }
-  async componentDidMount(){
-    this.getTrending()
-  }
-  render(){
-    return <div>Loading</div>
-  }
+GifLoader.propTypes = {
+  gifs:PropTypes.array.isRequired
 }
 
 export default GifLoader
