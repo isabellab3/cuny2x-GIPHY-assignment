@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import GifLoader from './GifLoader.js'
 import axios from "axios"
 
 const API_KEY = "tmtF2QRwHh7tnPxTZp5sxWf4FSX5DcBQ"
