@@ -1,0 +1,61 @@
+.gifloader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gif {
+    margin: 40px;
+}
+
+img:hover {
+    box-shadow: 10px 10px rgb(43, 204, 164);
+}
+
+.searchField {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchBar {
+    text-align: center;
+
+}
+
+input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(43, 204, 164);
+
+}
+
+
+button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 20px;
+    color: white;
+    border: 0px solid transparent;
+    background-color: rgb(43, 204, 164);
+    border-radius: 10px;
+
+}
+
+button:hover {
+    background-color: rgb(250, 73, 82)
+}
+
+h1 {
+    text-decoration: underline;
+    color: rgb(250, 73, 82)
+}
+
+span {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

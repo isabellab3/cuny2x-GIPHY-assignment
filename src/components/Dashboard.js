@@ -23,17 +23,19 @@ class Dashboard extends Component{
     this.setState({gifs:gifs.data.data})
   }
   async componentDidMount(){
-    const endpoint = 'http://api.giphy.com/v1/gifs/trending?api_key=' + API_KEY
+    const endpoint = `http://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`
     const gifs = await axios.get(endpoint)
     this.setState({gifs:gifs.data.data})
   }
   render(){
     return <div className="searchField">
-              <form onSubmit={this.handleSubmit}>
-                <p>Search Gifs</p>
-                <input type="text" value={this.state.searchInput} onChange={this.handleInput}></input>
-                <button type="submit">Submit</button>
-              </form>
+              <div className="searchBar">
+                <form onSubmit={this.handleSubmit}>
+                  <h1><span>Search Gifs</span></h1>
+                  <input type="text" value={this.state.searchInput} onChange={this.handleInput}></input>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
               <GifLoader gifs = {this.state.gifs}/>
            </div>
   }

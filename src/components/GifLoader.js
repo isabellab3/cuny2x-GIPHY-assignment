@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import './GifLoader.css'
 
 function GifLoader(props){
     return <div className="gifloader">
               {props.gifs.length > 0 ?
                   props.gifs.map((gif, index) => {
+                    console.log(gif)
                     return (<div className="gif" key={index}>
-                              <img src={gif.images.original.url} alt="gif" width={200}></img>
+                              <img src={gif.images.downsized.url} alt="gif" height={150}></img>
                            </div>)
                   })
                 :
