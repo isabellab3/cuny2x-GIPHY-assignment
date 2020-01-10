@@ -6,7 +6,6 @@ function GifLoader(props){
     return <div className="gifloader">
               {props.gifs.length > 0 ?
                   props.gifs.map((gif, index) => {
-                    console.log(gif)
                     return (<div className="gif" key={index}>
                               <img src={gif.images.downsized.url} alt="gif" height={150}></img>
                            </div>)

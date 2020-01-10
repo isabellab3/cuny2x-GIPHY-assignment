@@ -3,12 +3,6 @@ import GifLoader from './GifLoader.js'
 import axios from "axios"
 
 const API_KEY = "tmtF2QRwHh7tnPxTZp5sxWf4FSX5DcBQ"
-const DEFAULT_RATING = "g"
-const DEFAULT_LANG = "en"
-const DEFAULT_LIMIT = 25
-
-
-
 
 class Dashboard extends Component{
   constructor(props){
@@ -16,9 +10,9 @@ class Dashboard extends Component{
     this.state = {
       searchInput:"",
       gifs: [],
-      rating: DEFAULT_RATING,
-      lang: DEFAULT_LANG,
-      limit: DEFAULT_LIMIT
+      rating: "g",
+      lang: "en",
+      limit: 25
     }
   }
   handleInput = function(field) {
@@ -29,7 +23,7 @@ class Dashboard extends Component{
 
   handleBlur = (e) => {
     if (e.target.value <= 0) {
-      this.setState({limit: DEFAULT_LIMIT})
+      this.setState({limit: 25})
     }
   }
   handleSubmit = async (e) => {
