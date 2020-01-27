@@ -1,3 +1,4 @@
+Completed by William Lu, Anthony Sokolov, and Isabella Berekdar for the January 2020 Cuny2x bootcamp.
 # Coding Exercise
 
 For this group assignment, you will create a simple web application that does the following:
